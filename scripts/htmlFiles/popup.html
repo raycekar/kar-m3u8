@@ -5,16 +5,21 @@
         height: 100px;
         width: 400px;
     }
+    .header {
+        margin: auto;
+        text-align: center;
+        display: inline-block;
+    }
 </style>
 <body>
-
-    <h1><u>m3u8 Links</u></h1>
-
+    <div class="header">
+        <h1><u>M3U8 Links</u></h1>
+        <button id="clearBttn" type="button">Clear List</button>
+    </div>
     <div id="linkContainer">
         <ul id="linkList"></ul>
     </div>
 
 </body>
-<script src="../jsFiles/eventPage.js"></script>
 <script src="../jsFiles/popup.js"></script>
 </html>

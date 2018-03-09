@@ -10,6 +10,8 @@ chrome.webRequest.onCompleted.addListener(function (data) {
 
 // message listener from popup
 chrome.runtime.onMessage.addListener(function (mssg, sender, fun) {
+    if(mssg == "CLEARLIST")
+        m3u8List = [];
     fun(m3u8List)
 });
 
