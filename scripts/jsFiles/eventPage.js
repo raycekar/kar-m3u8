@@ -3,9 +3,7 @@ var m3u8List = [];
 
 //Listener for requests
 chrome.webRequest.onCompleted.addListener(function (data) {
-    console.log(data.url)
     m3u8List.push(data.url);
-    console.log(m3u8List)
 }, { urls: ["*://*/*.m3u8"] });
 
 // message listener from popup

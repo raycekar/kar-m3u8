@@ -2,7 +2,6 @@ var list = document.getElementById("linkList")
 
 
 var mssgHandler = function (data) {
-    console.log(data)
     var m3u8List = data;
     for (i = 0; i < m3u8List.length; i++) {
         var node = document.createElement("LI");
