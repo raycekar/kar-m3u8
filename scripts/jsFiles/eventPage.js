@@ -1,16 +1,15 @@
-//var list = document.getElementById("linkList")
-//console.log(list)
-//var node = document.createElement("LI")
-//node.textContent = "hello"
-//list.appendChild(node)
-//console.log("here")
+// list of all m3u8 links
+var m3u8List = [];
 
+//Listener for requests
 chrome.webRequest.onCompleted.addListener(function (data) {
-
     console.log(data.url)
+    m3u8List.push(data.url);
+    console.log(m3u8List)
+}, { urls: ["*://*/*.m3u8"] });
 
-}, { urls: ["*://*/*.m3u8", "*://*/*.ts"] });
-
-
-
+// message listener from popup
+chrome.runtime.onMessage.addListener(function (mssg, sender, fun) {
+    fun(m3u8List)
+});
 
