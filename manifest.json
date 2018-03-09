@@ -16,11 +16,13 @@
     "background": {
         "persistant": false,
         "scripts": ["scripts/jsFiles/eventPage.js"]
-    }
-    
+    },
+
     "permissions": [
         "tabs",
-        "http://*/"
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
     ]
     
 }
